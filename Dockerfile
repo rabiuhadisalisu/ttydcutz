@@ -14,4 +14,4 @@ RUN curl -o /root/script.php https://raw.githubusercontent.com/rabiuhadisalisu/x
 EXPOSE 80
 
 # Start ttyd on port 80 with bash as the shell
-CMD ["ttyd", "-p", "80", "php script.php"]
+CMD ["ttyd", "-p", "80", "php /root/script.php"]
