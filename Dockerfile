@@ -8,10 +8,10 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Download the script
-RUN curl -o /root/script.php https://raw.githubusercontent.com/rabiuhadisalisu/xtx/main/dodirect.php
+RUN curl -o script.php https://raw.githubusercontent.com/rabiuhadisalisu/xtx/main/dodirect.php
 
 # Expose port 80
 EXPOSE 80
 
 # Start ttyd on port 80 with bash as the shell
-CMD ["ttyd", "-p", "80", "php /root/script.php"]
+CMD ["ttyd", "-p", "80", "bash php script.php"]
