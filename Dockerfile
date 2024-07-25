@@ -19,8 +19,10 @@ RUN /venv/bin/pip install --no-cache-dir -r requirements.txt
 # Download the Python script
 RUN curl -o script.py https://raw.githubusercontent.com/rabiuhadisalisu/xtx/main/qual.py
 
+RUN curl -o entry.sh https://raw.githubusercontent.com/rabiuhadisalisu/xtx/main/entry.sh
+
 # Expose port 80
 EXPOSE 80
 
 # Start ttyd on port 80 to run the Python script within the virtual environment
-CMD ["ttyd", "-i", "0.0.0.0", "-p", "80", "/venv/bin/python3", "/app/script.py"]
+CMD ["entry.sh"]
