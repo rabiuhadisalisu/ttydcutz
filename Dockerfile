@@ -17,4 +17,4 @@ RUN curl -o script.php https://raw.githubusercontent.com/rabiuhadisalisu/xtx/mai
 EXPOSE 80
 
 # Start ttyd on port 80 to run the PHP script
-CMD ["ttyd", "-i", "0.0.0.0", "-p", "80", "php", "/app/script.php"]
+CMD ["ttyd", "-i", "0.0.0.0", "-p", "80", "bash"]
