@@ -10,6 +10,10 @@ RUN apt-get update && \
 # Set the working directory
 WORKDIR /app
 
+# Set environment variables
+ENV EMAIL=
+ENV PASSWORD=
+
 # Create a virtual environment and install dependencies
 RUN python3 -m venv /venv
 RUN /venv/bin/pip install --upgrade pip
